@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Discord Toolkit Extension",
+  "version": "1.5",
+  "description": "Enhanced toolkit with Discord API integration for user info, server lookup, and message search.",
+  "permissions": [
+    "clipboardWrite",
+    "storage",
+    "https://discord.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "styles.css"
+  ]
+}
